@@ -84,7 +84,7 @@ class Hooty(commands.Cog):
             await ctx.send("You have added a Mittens message.")
     
     @commands.command(name='remove-mittens', help="Remove a Mittens message sent by Casper")
-    async def remove_hoot(self, ctx, *, mittens_message: str):
+    async def remove_mittens(self, ctx, *, mittens_message: str):
         if mittens_message not in self.mittens_messages:
             await ctx.send("This message is not a valid Mittens message.")
         else:
