@@ -14,7 +14,7 @@ setupfile.close()
 TOKEN = setupdict['token']
 
 #general bot meta
-bot = commands.Bot(command_prefix='🦉')
+bot = commands.Bot(command_prefix='<:hoot:760289082085212230>')
 bot.remove_command('help')
 
 @bot.event
