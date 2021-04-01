@@ -7,8 +7,8 @@ import json
 import discord
 from discord.ext import tasks, commands
 
-intents = discord.Intents.default()
-intents.members = True
+# intents = discord.Intents.default()
+# intents.members = True
 
 setupfile = open("load/setup.json", "r")
 setupdict = json.loads(setupfile.read())
@@ -17,7 +17,7 @@ setupfile.close()
 TOKEN = setupdict['token']
 
 #general bot meta
-bot = commands.Bot(command_prefix='<:duo:827029241148866600>', intents=intents)
+bot = commands.Bot(command_prefix='<:duo:827029241148866600>')
 bot.remove_command('help')
 
 @bot.event
