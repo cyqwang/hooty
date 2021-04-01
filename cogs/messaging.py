@@ -53,7 +53,7 @@ class Messaging(commands.Cog):
 
     @commands.command(name='reply')
     @commands.has_role(setupdict["roles"]["resident"])
-    async def reply(self, ctx, channel: discord.TextChannel, message_id: int, message_str: str):
+    async def reply(self, ctx, channel: discord.TextChannel, message_id: int, *, message_str: str):
         message = await channel.fetch_message(message_id)
         await message.reply(message_str)
 
