@@ -17,7 +17,7 @@ setupfile.close()
 TOKEN = setupdict['token']
 
 #general bot meta
-bot = commands.Bot(command_prefix='<:duo:827029241148866600>')
+bot = commands.Bot(command_prefix='<:duo:827029241148866600>', intents=intents)
 bot.remove_command('help')
 
 @bot.event
