@@ -14,7 +14,7 @@ setupfile.close()
 TOKEN = setupdict['token']
 
 #general bot meta
-bot = commands.Bot(command_prefix='<:hoot:760289082085212230>')
+bot = commands.Bot(command_prefix='<:duo:760289082085212230>')
 bot.remove_command('help')
 
 @bot.event
@@ -26,7 +26,7 @@ async def on_command_error(ctx, error):
 	await ctx.send(error)
 
 for filename in os.listdir("./cogs"):
-	if filename.endswith(".py") and filename != "__init__.py":
+	if filename.endswith(".py") and filename != "__init__.py" and filename != "hooty.py":
 		bot.load_extension(f"cogs.{filename[:-3]}")
 
 bot.run(TOKEN)
