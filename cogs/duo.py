@@ -31,9 +31,11 @@ class Hooty(commands.Cog):
     async def on_message(self, message):
         if message.author.bot: return
         if message.channel.category_id in setupdict["hooty-not-allowed-categories"]: return
-        
+        await message.channel.send(f"test {self.percent}")
         generate = random.randint(1,100)
+        await message.channel.send(f"gen {generate}")
         if generate <= self.percent:
+            await message.channel.send(len(self.hoot_messages))
             hoot_message_num = random.randint(0,len(self.hoot_messages)-1)
             await message.channel.send(self.hoot_messages[hoot_message_num])
 	
