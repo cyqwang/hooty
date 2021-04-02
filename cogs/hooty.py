@@ -32,7 +32,9 @@ class Hooty(commands.Cog):
     @commands.Cog.listener()
     async def on_message(self, message):
         if message.author.bot: return
-        if message.channel.category_id not in setupdict["hooty-allowed-categories"]: return
+        if message.channel.category_id in setupdict["hooty-not-allowed-categories"]: return
+        if message.channel.id == 827004123031142411: return
+        
         if message.author.id == setupdict["mittens"]:
             generate = random.randint(1,100)
             if generate <= self.mittens_percent:
